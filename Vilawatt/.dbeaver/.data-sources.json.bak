@@ -1,0 +1,469 @@
+{
+	"folders": {
+		"PROD": {},
+		"Test": {}
+	},
+	"connections": {
+		"postgres-jdbc-18f0a001396-1f968db3e78ef38c": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_Aganea",
+			"read-only": true,
+			"folder": "PROD",
+			"configuration": {
+				"host": "3.250.64.115",
+				"port": "35432",
+				"database": "aganea",
+				"url": "jdbc:postgresql://3.250.64.115:35432/aganea",
+				"configurationType": "MANUAL",
+				"type": "prod",
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"postgre_ssl": {
+						"type": "CONFIG",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"ssl.ca.cert": "/Users/jaume/Nextcloud/soft/SQL/DBeaver-JC/eu-west-1-bundle.pem",
+							"ssl.client.cert": "",
+							"ssl.client.key": "",
+							"ssl.method": "CERTIFICATES",
+							"sslMode": "verify-ca",
+							"sslFactory": ""
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a001d1c-5a7281699b2814fb": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_API",
+			"folder": "PROD",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "vwapi",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/vwapi",
+				"configurationType": "MANUAL",
+				"type": "prod",
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "54.74.40.204",
+							"port": 22,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/aws/ubiec2-d4g-cluster.pem",
+							"implementation": "sshj",
+							"shareTunnels": true,
+							"localHost": "",
+							"remoteHost": "",
+							"jumpServer.count": 0
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a0027da-72a626e785f5847a": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_cyclos4",
+			"save-password": true,
+			"folder": "PROD",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "vilawatt_cyclos4",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/vilawatt_cyclos4",
+				"configurationType": "MANUAL",
+				"type": "prod",
+				"closeIdleConnection": false,
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "54.74.40.204",
+							"port": 22,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/aws/ubiec2-d4g-cluster.pem",
+							"implementation": "sshj",
+							"shareTunnels": true,
+							"localHost": "",
+							"remoteHost": "",
+							"jumpServer.count": 0
+						}
+					}
+				},
+				"bootstrap": {
+					"txnIsolation": 1
+				}
+			}
+		},
+		"postgres-jdbc-18f0a003103-3036a9f8630cab40": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_vwstats",
+			"folder": "PROD",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "vwstats",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/vwstats",
+				"configurationType": "MANUAL",
+				"type": "prod",
+				"keepAlive": 60,
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "54.74.40.204",
+							"port": 22,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/aws/ubiec2-d4g-cluster.pem",
+							"implementation": "sshj",
+							"shareTunnels": true,
+							"localHost": "",
+							"remoteHost": "",
+							"jumpServer.count": 0
+						}
+					}
+				},
+				"bootstrap": {
+					"txnIsolation": 1,
+					"defaultCatalog": "vwstats",
+					"defaultSchema": "public"
+				}
+			}
+		},
+		"postgres-jdbc-18f0a0063c2-27388bdb3564fcb5": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_Aganea (TEST)",
+			"read-only": true,
+			"folder": "Test",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "test_aganea",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/test_aganea",
+				"configurationType": "MANUAL",
+				"type": "test",
+				"closeIdleConnection": false,
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "3.250.64.115",
+							"port": 22.0,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/Ubi_Comuna/arxiu-intern/Ubiquat altres/Amazon/ubiec2-d4g-cluster.pem",
+							"implementation": "jsch",
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a006dfa-5cac6160852d8a36": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_API (TEST)",
+			"folder": "Test",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "test_vwapi",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/test_vwapi",
+				"configurationType": "MANUAL",
+				"type": "test",
+				"closeIdleConnection": false,
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "3.250.64.115",
+							"port": 22.0,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/Ubi_Comuna/arxiu-intern/Ubiquat altres/Amazon/ubiec2-d4g-cluster.pem",
+							"implementation": "jsch",
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a007558-4260ab37da6a552": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_cyclos4 (TEST)",
+			"folder": "Test",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "vilawatt_test_cyclos4",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/vilawatt_test_cyclos4",
+				"configurationType": "MANUAL",
+				"type": "test",
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "3.250.64.115",
+							"port": 22.0,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/Ubi_Comuna/arxiu-intern/Ubiquat altres/Amazon/ubiec2-d4g-cluster.pem",
+							"implementation": "jsch",
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a007df8-69502d99a5067a26": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_vwstats (TEST)",
+			"folder": "Test",
+			"configuration": {
+				"host": "vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "test_vwstats",
+				"url": "jdbc:postgresql://vcity-rds-postgres.c11ppfvvsfrq.eu-west-1.rds.amazonaws.com:5432/test_vwstats",
+				"configurationType": "MANUAL",
+				"type": "test",
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false"
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "3.250.64.115",
+							"port": 22.0,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/Ubi_Comuna/arxiu-intern/Ubiquat altres/Amazon/ubiec2-d4g-cluster.pem",
+							"implementation": "jsch",
+							"localHost": "",
+							"remoteHost": ""
+						}
+					}
+				}
+			}
+		},
+		"postgres-jdbc-18f0a0089b4-62038e010954ae53": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "vilawatt_Postgres_CRON",
+			"save-password": true,
+			"configuration": {
+				"host": "10.1.100.102",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://10.1.100.102:5432/postgres",
+				"configurationType": "MANUAL",
+				"type": "prod",
+				"keepAlive": 60,
+				"closeIdleConnection": false,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false",
+					"show-database-statistics": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"host": "54.74.40.204",
+							"port": 22,
+							"authType": "PUBLIC_KEY",
+							"keyPath": "/Users/jaume/Nextcloud/aws/ubiec2-d4g-cluster.pem",
+							"implementation": "sshj",
+							"shareTunnels": true,
+							"localHost": "",
+							"remoteHost": "",
+							"jumpServer.count": 0
+						}
+					}
+				},
+				"bootstrap": {
+					"txnIsolation": 1,
+					"defaultCatalog": "postgres",
+					"defaultSchema": "public"
+				}
+			}
+		}
+	},
+	"virtual-models": {"postgres-jdbc-18f0a003103-3036a9f8630cab40":{"vwstats":{"public":{":api_voucher_campaign_quota":{"constraints":{"VIRTUAL_PK":{"type":"vpk","attributes":["id"]}}},":api_voucher_campaign":{"constraints":{"VIRTUAL_PK":{"type":"vpk","attributes":["id"]}}},":api_voucher_campaign_custom_assignment_delta":{"constraints":{"VIRTUAL_PK":{"type":"vpk","useAllColumns":true}}},":te_dup":{"constraints":{"VIRTUAL_PK":{"type":"vpk","useAllColumns":true}}}}}}},
+	"connection-types": {
+		"prod": {
+			"name": "Production",
+			"color": "org.jkiss.dbeaver.color.connectionType.prod.background",
+			"description": "Production database",
+			"auto-commit": false,
+			"confirm-execute": false,
+			"confirm-data-change": true,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 600,
+			"auto-close-connections": true,
+			"close-connections-period": 3600
+		},
+		"test": {
+			"name": "Test",
+			"color": "org.jkiss.dbeaver.color.connectionType.qa.background",
+			"description": "Test (QA) database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": true,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": false,
+			"close-transactions-period": 900,
+			"auto-close-connections": true,
+			"close-connections-period": 7200
+		}
+	}
+}
