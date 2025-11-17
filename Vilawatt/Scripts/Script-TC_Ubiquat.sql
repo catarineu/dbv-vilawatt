@@ -1,13 +1,19 @@
 --CREATE OR REPLACE TEMP VIEW ubiquat_report_ede_accounts AS
 
 -- TC_UBIQUAT: First export from DB.AGANEA, then import into DB.VWSTATS
-SELECT r.id, r.user_id, u.name,
+WITH my_login AS (
+	SELECT user_id, max(date_time) AS last_login
+ 	  FROM login_history_logs lhl2 
+	 GROUP BY user_id
+)
+SELECT --r.id, 
+		r.user_id, u.name,
 		coalesce(ucfv1.string_value, ucfv2.string_value) as doc_id,
-		r.creation_date, r.last_modify_date, rt.internal_name,
-		cfv1.integer_value as cyclos_account_id,
-		cfv2.string_value as ede_account_id,
-		cfv3pv.internal_name as ede_account_type,
-		cfv4.decimal_value as ede_account_balance
+		lhl.last_login, r.creation_date, -- r.last_modify_date, rt.internal_name,
+		cfv1.integer_value as cyclos_cc_id,
+		cfv2.string_value as ede_cc_id,
+		cfv3pv.internal_name as ede_cc_type,
+		cfv4.decimal_value as ede_cc_balance
   FROM records r
        JOIN record_types rt on r.type_id = rt.id  and rt.internal_name = 'edeAccountUserRecord'
        JOIN networks n on n.id = rt.network_id and n.internal_name = 'vwlive'
@@ -26,6 +32,8 @@ SELECT r.id, r.user_id, u.name,
        JOIN user_custom_fields ucf2 on ucf2.internal_name = 'idDocumentNumber' and ucf1.network_id = n.id
        LEFT JOIN user_custom_field_values ucfv1 on ucfv1.field_id = ucf1.id and ucfv1.owner_id = u.id
        LEFT JOIN user_custom_field_values ucfv2 on ucfv2.field_id = ucf2.id and ucfv2.owner_id = u.id
- ORDER BY  cyclos_account_id;
+       LEFT JOIN my_login lhl ON lhl.user_id = u.id
+--WHERE u.name ~* 'CATARI'
+   ORDER BY last_login DESC, (cfv4.decimal_value>0) DESC NULLS LAST, creation_date desc;
  
 -- ede_account_id i ede_account_type
